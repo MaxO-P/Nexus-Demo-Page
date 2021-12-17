@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: manrope;
+    src: url(regular.otf);
+}
+
+@font-face {
+    font-family: orkney;
+    src: url(Orkney\ Regular.otf);
+}
+
+main {
+    min-height: 100vh;
+    background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+    height: 20rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background: linear-gradient(to right bottom,
+            rgba(255, 73, 49, 0.7),
+            rgba(255, 255, 255, 0.3));
+    z-index: 100;
+    backdrop-filter: blur(1rem);
+    position: relative;
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.circle1, .circle2 {
+    background: white;
+    background: linear-gradient(to left top,
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 73, 49, 0.7));
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+    z-index: 2;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+    transition: right ease 1s;
+}
+
+.circle1:hover {
+    right: -1px;
+    margin-right: 10px;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 15%;
+    transition: left ease 1s;
+}
+
+.circle2:hover {
+    left: -1px;
+    margin-left: 10px;
+}
+
+.header {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    font-family: orkney;
+    font-size: 200%;
+    text-align: center;
+    color: #000000;
+}
+
+.paragraph {
+    margin-left: 2%;
+    margin-right: 1%;
+    margin-top: 1%;
+    font-family: manrope;
+    font-size: 100%;
+    color: #000000;
+}
+
+.wordsRight {
+    margin-left: 10%;
+    margin-right: 25%;
+    margin-top: 30%;
+    font-family: manrope;
+    font-size: 100%;
+    color: #000000
+}
+
+.wordsLeft {
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 30%;
+    font-family: manrope;
+    font-size: 100%;
+    color: #000000;
+}
+
+.backCircle1 {
+    position: absolute;
+    background: white;
+    background: linear-gradient(to left top,
+            rgba(255, 255, 255, 0.103),
+            rgba(255, 255, 255, 0.37));
+    height: 35rem;
+    width: 35rem;
+    border-radius: 50%;
+    left: 80%;
+    top: 60%;
+    z-index: 1;
+}
+
+.backCircle2 {
+    position: absolute;
+    background: white;
+    background: linear-gradient(to left top,
+            rgba(255, 255, 255, 0.103),
+            rgba(255, 255, 255, 0.37));
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    right: 80%;
+    bottom: 60%;
+    z-index: 1;
+}
+
+.backCircle3 {
+    position: absolute;
+    background: white;
+    background: linear-gradient(to left top,
+            rgba(255, 255, 255, 0.103),
+            rgba(255, 255, 255, 0.37));
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50%;
+    right: 60%;
+    top: 10%;
+    z-index: 1;
+}
+
+.backCircle4 {
+    position: absolute;
+    background: white;
+    background: linear-gradient(to left top,
+            rgba(255, 255, 255, 0.103),
+            rgba(255, 255, 255, 0.37));
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50%;
+    left: 60%;
+    bottom: 10%;
+    z-index: 1;
+}
+
+/* .buttonOne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: manrope;
+    background: black;
+    color: white;
+    border-radius: .5rem;
+    height: 2rem;
+    width: 10rem;
+    margin: auto;
+    margin-top: 30%;
+    margin-bottom: 1%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+} */
+
+/* .buttonTwo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: manrope;
+    background: rgb(255, 255, 255);
+    color: white;
+    border-radius: .5rem;
+    height: 2rem;
+    width: 10rem;
+    margin: auto;
+    margin-top: 30%;
+    margin-bottom: 1%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+} */
+
+.buttonThree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: manrope;
+    background: rgba(255, 73, 49, 0.733);
+    color: white;
+    border-radius: .5rem;
+    height: 2rem;
+    width: 10rem;
+    margin: auto;
+    margin-top: 30%;
+    margin-bottom: 1%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
