@@ -14,22 +14,17 @@
 
 main {
     min-height: 100vh;
-    background: linear-gradient(to right top, #ffdf9bb4, #f18aff);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .glass {
-    background: white;
     min-height: 80vh;
     width: 60%;
     height: 20rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
-    background: linear-gradient(to right bottom,
-            rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.3));
     border-radius: 1rem;
     z-index: 100;
     backdrop-filter: blur(1rem);
@@ -198,7 +193,7 @@ main {
     cursor: pointer;
 }
 
-/* .buttonTwo {
+.buttonTwo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,4 +211,27 @@ main {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-} */
+}
+
+.buttonThree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: manrope;
+    background: rgba(255, 73, 49, 0.733);
+    color: white;
+    border-radius: .5rem;
+    height: 2rem;
+    width: 10rem;
+    margin: auto;
+    margin-top: 30%;
+    margin-bottom: 1%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
