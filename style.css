@@ -78,62 +78,6 @@ main {
     text-align: center;
 }
 
-.backCircle1 {
-    position: absolute;
-    background: white;
-    background: linear-gradient(to left top,
-            rgba(255, 255, 255, 0.103),
-            rgba(255, 255, 255, 0.37));
-    height: 35rem;
-    width: 35rem;
-    border-radius: 50%;
-    left: 80%;
-    top: 60%;
-    z-index: 1;
-}
-
-.backCircle2 {
-    position: absolute;
-    background: white;
-    background: linear-gradient(to left top,
-            rgba(255, 255, 255, 0.103),
-            rgba(255, 255, 255, 0.37));
-    height: 30rem;
-    width: 30rem;
-    border-radius: 50%;
-    right: 80%;
-    bottom: 60%;
-    z-index: 1;
-}
-
-.backCircle3 {
-    position: absolute;
-    background: white;
-    background: linear-gradient(to left top,
-            rgba(255, 255, 255, 0.103),
-            rgba(255, 255, 255, 0.37));
-    height: 50rem;
-    width: 50rem;
-    border-radius: 50%;
-    right: 60%;
-    top: 10%;
-    z-index: 1;
-}
-
-.backCircle4 {
-    position: absolute;
-    background: white;
-    background: linear-gradient(to left top,
-            rgba(255, 255, 255, 0.103),
-            rgba(255, 255, 255, 0.37));
-    height: 50rem;
-    width: 50rem;
-    border-radius: 50%;
-    left: 60%;
-    bottom: 10%;
-    z-index: 1;
-}
-
 .buttonOne {
     background: #18243f;
     border-radius: .5rem;
