@@ -12,8 +12,9 @@ var sheetIndex = 0;
 /**
  * Cycles through the page-wide (non-layout) sheets.
  * @param {boolean} [isBackwards] - if true, the sheet index will be moved backwards instead of forwards. Defaults to false.
+ * @param {number} [speed] - the speed at which the sheet fades in and out (in ms). Defaults to 500.
  */
-function cycle(isBackwards = false) {
+function cycle(isBackwards = false, speed = 250) {
     // BEWARE TO ALL YE WHO ENTER HERE:
     // THIS CODE IS REALLY GOOD BUT NOT USER FRIENDLY.
     // I HIGHLY RECOMMEND YOU NOT TO LOOK AT IT.
@@ -29,7 +30,7 @@ function cycle(isBackwards = false) {
     // Remember, the sheetIndex is updated seperately from the animation (which actually applies the stylesheets)
     // That means that ONLY when the animation fades in, the sheetIndex is used to set the actual stylesheet.
     // This is good because it accounts for user input but doesn't interrupt the animation.
-    
+
     // That works for fading TO black, but not FROM black.
     // If the user clicks the button TWICE while it is fading FROM black,
     // the next time they hit the button it will fade to same sheet.
@@ -45,7 +46,7 @@ function cycle(isBackwards = false) {
 
     // -W
 
-    if (!isFading) fadeout.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: 'forwards' });
+    if (!isFading) fadeout.animate([{ opacity: 0 }, { opacity: 1 }], { duration: speed, fill: 'forwards' });
 
     // This is 2:00 AM code. I'm sorry.
     sheetIndex += (isBackwards ? -1 : 1);
@@ -57,9 +58,9 @@ function cycle(isBackwards = false) {
 
     if (!isFading) setTimeout(() => {
         mainsheet.href = sheets[sheetIndex].href;
-        fadeout.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 500, fill: 'forwards' });
-        setTimeout(() => { isFading = false;} , 500);
-    }, 500);
+        fadeout.animate([{ opacity: 1 }, { opacity: 0 }], { duration: speed, fill: 'forwards' });
+        setTimeout(() => { isFading = false; }, speed);
+    }, speed);
 
     isFading = true;
 }
