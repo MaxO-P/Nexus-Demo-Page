@@ -5,44 +5,39 @@ html {
   font-family: "manrope", sans-serif;
 }
 
-/* TODO: #1 change this to html { ... } */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* Removed the removal of the scrollbar for accessibility reasons */
-  /* TODO: #3 Fix the scrollbar! */
-  /* -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-x: hidden;
-  overflow-y: hidden; */
+#fadeout {
+  position: fixed;
+  user-select: none;
+  pointer-events: none;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity ease 0.5;
 }
 
-/* *::-webkit-scrollbar {
-  display: none;
-} */
-
-main {
+body {
+  margin: 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-section {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .glass {
-  min-height: 80vh;
-  width: 60%;
-  height: 20rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  overflow: auto;
+  /* min-height: 80vh; */
+  height: 80vh;
+  width: 60vw;
+  /* height: 20rem; */
+  /* margin-top: 5rem;
+  margin-bottom: 5rem; */
   border-radius: 1rem;
   z-index: 100;
   backdrop-filter: blur(1rem);
-  position: relative;
+  /* position: relative; */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
     0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
     0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
@@ -63,21 +58,23 @@ section {
 .circle1 {
   top: 5%;
   right: 15%;
-  transition: right ease 1s;
+  transition: right ease 1s 0.5s;
 }
 
 .circle1:hover {
   right: -1px;
+  transition: right ease 1s 0s;
 }
 
 .circle2 {
   bottom: 5%;
   left: 15%;
-  transition: left ease 1s;
+  transition: left ease 1s 0.5s;
 }
 
 .circle2:hover {
   left: -1px;
+  transition: left ease 1s 0s;
 }
 
 .wordsRight,
@@ -90,6 +87,15 @@ section {
   text-align: center;
 }
 
+.paragraph {
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  font-size: 115%;
+  color: #000000;
+}
+
 .wordsRight,
 .wordsLeft,
 .paragraph {
@@ -98,15 +104,6 @@ section {
     0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
     0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
   overflow: visible;
-}
-
-.paragraph {
-  text-align: left;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 5%;
-  font-size: 115%;
-  color: #000000;
 }
 
 .header {
