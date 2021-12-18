@@ -1,12 +1,16 @@
-let sheet = document.getElementById("sheet");
-function cycle() {
-    sheet.setAttribute("href", "style2.css");
+const mainsheet = document.getElementById("mainsheet");
+const templates = document.getElementById("sheets");
+var sheets = templates.content.children;
+var sheetIndex = 0;
+
+/**
+ * Cycles through the sheets
+ * @param {boolean} [isBackwards] - if true, the sheet index will be moved backwards.
+ */
+function cycle(isBackwards) {
+    sheetIndex += isBackwards ? -1 : 1;
+    if (sheetIndex < 0) sheetIndex = sheets.length - 1; else if (sheetIndex >= sheets.length) sheetIndex = 0;
+    mainsheet.href = sheets[sheetIndex].href;
 }
 
-function cycleNext() {
-    sheet.setAttribute("href", "style3.css");
-}
-
-function cycleBack() {
-    sheet.setAttribute("href", "style.css");
-}
+console.log(sheets)
