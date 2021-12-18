@@ -13,4 +13,4 @@ function cycle(isBackwards) {
     mainsheet.href = sheets[sheetIndex].href;
 }
 
-console.log(sheets)
+console.log(sheets);
