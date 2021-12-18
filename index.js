@@ -1,3 +1,4 @@
+// Define constant HTML element variables
 const mainsheet = document.getElementById("mainsheet");
 const templates = document.getElementById("sheets");
 const prev = document.getElementById("pButton");
