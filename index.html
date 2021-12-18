@@ -8,18 +8,28 @@
     <style>
         @font-face {
             font-family: manrope;
-            src: url(regular.otf);
+            src: url("regular.otf");
         }
 
         @font-face {
             font-family: orkney;
-            src: url(Orkney\ Regular.otf);
+            src: url("Orkney Regular.otf");
+        }
+
+        @font-face {
+            font-family: bigzoomers;
+            src: url(SourceCodePro-ExtraLight.otf);
+        }
+
+        @font-face {
+            font-family: bigzoomers2;
+            src: url(SourceCodePro-Light.otf);
         }
     </style>
     <link rel="stylesheet" href="layout.css">
-    <!-- <link id="mainsheet" rel="stylesheet" href="style2.css"> -->
+    <link id="mainsheet" rel="stylesheet" href="style1.css">
     <template id="sheets">
-        <!-- <link id="sheet" rel="stylesheet" href="style1.css"> -->
+        <link id="sheet" rel="stylesheet" href="style1.css">
         <link id="sheet" rel="stylesheet" href="style2.css">
         <link id="sheet" rel="stylesheet" href="style3.css">
     </template>
@@ -39,9 +49,10 @@
                 occaecat cupidatat non proident, sunt in culpa qui officia
                 deserunt mollit anim id est laborum.
             </p>
-            <div class="buttonOne" onclick="cycle()"></div>
-            <div class="buttonTwo" onclick="cycle()"></div>
-            <div class="buttonThree" onclick="cycle()"></div>
+            <div id="cycleCss">
+                <button id="pButton">Previous Stylesheet</button>
+                <button id="nButton">Next Stylesheet</button>
+            </div>
         </section>
         <!-- EXTRA CIRCLES IN BACKGROUND⏬ -->
         <!-- <div class="backCircle1"></div>
