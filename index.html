@@ -33,7 +33,6 @@
 
             .circle1:hover {
                 right: -1px;
-                margin-right: 10px;
             }
 
             .circle2 {
@@ -44,7 +43,6 @@
 
             .circle2:hover {
                 left: -1px;
-                margin-left: 10px;
             }
 
             .wordsRight,
@@ -56,14 +54,37 @@
                     0 8px 16px rgba(0, 0, 0, 0.07),
                     0 16px 32px rgba(0, 0, 0, 0.07),
                     0 32px 64px rgba(0, 0, 0, 0.07);
+                overflow: visible;
+            }
+
+            .paragraph {
+                margin-left: 15%;
+                margin-right: 15%;
+                margin-top: 5%;
+                font-size: 115%;
+                color: #000000;
             }
 
             .header {
+                margin-left: 2%;
+                margin-right: 2%;
+                margin-top: 5%;
+                font-family: bigzoomers;
+                font-size: 300%;
+                text-align: center;
+                color: #000000;
                 text-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
                     0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07),
                     0 8px 16px rgba(0, 0, 0, 0.07),
                     0 16px 32px rgba(0, 0, 0, 0.07),
                     0 32px 64px rgba(0, 0, 0, 0.07);
+                overflow: visible;
+            }
+
+            .buttonOne:active,
+            .buttonThree:active,
+            .buttonTwo:active {
+                transform: scale(90%);
             }
         </style>
         <link id="sheet" rel="stylesheet" href="style.css" />
@@ -83,9 +104,6 @@
                     occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
                 </p>
-                <div class="buttonOne" onclick="cycle()"></div>
-                <div class="buttonTwo" onclick="cycleNext()"></div>
-                <div class="buttonThree" onclick="cycleBack()"></div>
             </section>
             <!-- EXTRA CIRCLES IN BACKGROUND⏬ -->
             <!-- <div class="backCircle1"></div>
@@ -105,6 +123,9 @@
                     interesting.
                 </p>
             </div>
+            <div class="buttonOne" onclick="cycle()"></div>
+            <div class="buttonTwo" onclick="cycleNext()"></div>
+            <div class="buttonThree" onclick="cycleBack()"></div>
         </main>
     </body>
 </html>
