@@ -21,58 +21,162 @@
             src: url(SourceCodePro-ExtraLight.otf);
         }
 
-        @font-face {
+        .circle1 {
+            top: 5%;
+            right: 15%;
+            transition: right ease 1s;
+            overflow: visible;
+        }
+
+        .circle1:hover {
+            right: -1px;
+        }
+
+        .circle2 {
+            bottom: 5%;
+            left: 15%;
+            transition: left ease 1s;
+            overflow: visible;
+        }
+
+        .circle2:hover {
+            left: -1px;
+        }
+
+        .wordsRight,
+        .wordsLeft,
+        .paragraph {
             font-family: bigzoomers2;
-            src: url(SourceCodePro-Light.otf);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07),
+                0 8px 16px rgba(0, 0, 0, 0.07),
+                0 16px 32px rgba(0, 0, 0, 0.07),
+                0 32px 64px rgba(0, 0, 0, 0.07);
+            overflow: visible;
+        }
+
+        .paragraph {
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 5%;
+            font-size: 115%;
+            color: #000000;
+            text-align: center;
+        }
+
+        .header {
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 5%;
+            font-family: bigzoomers;
+            font-size: 300%;
+            text-align: center;
+            color: black;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07),
+                0 8px 16px rgba(0, 0, 0, 0.07),
+                0 16px 32px rgba(0, 0, 0, 0.07),
+                0 32px 64px rgba(0, 0, 0, 0.07);
+            overflow: visible;
+        }
+
+        .buttonOne:hover,
+        .buttonTwo:hover,
+        .buttonThree:hover {
+            transform: scale(97%);
+        }
+
+        .buttonOne:active,
+        .buttonThree:active,
+        .buttonTwo:active {
+            transform: scale(90%);
+        }
+
+        .links:active {
+            transform: scale(90%);
+        }
+
+        .links:hover {
+            color: rgb(255, 255, 255);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.322),
+                0 2px 4px rgba(0, 0, 0, 0.322),
+                0 4px 8px rgba(0, 0, 0, 0.322),
+                0 8px 16px rgba(0, 0, 0, 0.322),
+                0 16px 32px rgba(0, 0, 0, 0.322),
+                0 32px 64px rgba(0, 0, 0, 0.322);
+            font-weight: bold;
+        }
+
+        .links {
+            color: black;
+            /* font-weight: bold; */
+            font-family: bigzoomers2;
+        }
+
+        .smallTitles {
+            font-size: 150%;
+            font-weight: 900;
+        }
+
+        .glass {
+            overflow: visible;
         }
     </style>
-    <link rel="stylesheet" href="layout.css">
-    <link id="mainsheet" rel="stylesheet" href="style1.css">
-    <template id="sheets">
-        <link id="sheet" rel="stylesheet" href="style1.css">
-        <link id="sheet" rel="stylesheet" href="style2.css">
-        <link id="sheet" rel="stylesheet" href="style3.css">
-    </template>
+    <link id="sheet" rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
 </head>
 
 <body>
-    <div id="fadeout"></div>
-    <section class="glass">
-        <h1 class="header">Here is a title.</h1>
-        <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
-        </p>
-        <div id="cycleCss">
-            <button id="pButton">Previous Stylesheet</button>
-            <button id="nButton">Next Stylesheet</button>
+    <main>
+        <section class="glass">
+            <h1 class="header">Hello World!</h1>
+            <p class="paragraph">
+                This is a simple little website I created to demonstrate
+                some of what I've learned in Nexus. For my Nexus project I
+                have been learning to code. I started with HTML and CSS,
+                creating several simple pages just to try stuff out and see
+                what I could create. Then, once I felt more comfortable, I
+                started learning JavaScript (which it turns out I'm pretty
+                bad at 😅). I've had some awesome conversations with Charlie
+                MacFadyen about code and he pushed me to compete in the
+                <a class="links" href="https://www.congressionalappchallenge.us/">Congressional App Challenge!</a>
+                I teamed up with my friend Windsor Hoopes and over a weekend
+                we created the first version of our bus app. Since then I've
+                been practicing and learning as much as I can. It looks like
+                I'm running out of room so I'm going to stop now while this
+                page still looks balanced. Try clicking the box :]
+            </p>
+        </section>
+        <div class="circle1">
+            <p class="wordsRight">
+                <span class="smallTitles">Helpful Resources: <br /></span>
+                <a class="links" href="https://www.w3schools.com/default.asp"><br />
+                    w3schools</a>
+                <a class="links" href="https://stackoverflow.com/">stackoverflow</a>
+                <a class="links" href="https://github.com/">GitHub</a>
+                <a class="links" href="https://codepen.io/">
+                    <br />CodePen</a>
+                <a href="https://developer.mozilla.org/en-US/" class="links"><br />
+                    MDN Web Docs</a>
+                <a class="links" href="https://code.visualstudio.com/"><br />Visual Studio Code</a>
+            </p>
         </div>
-    </section>
-    <!-- EXTRA CIRCLES IN BACKGROUND⏬ -->
-    <!-- <div class="backCircle1"></div>
-            <div class="backCircle2"></div> -->
-    <!-- <div class="backCircle3"></div>
-            <div class="backCircle4"></div> -->
-    <div class="circle1">
-        <p class="wordsRight">
-            This might be a little more tricky but i think i can do it.
-            EYYYYY its working this is so sick hahahahahahha.
-        </p>
-    </div>
-    <div class="circle2">
-        <p class="wordsLeft">
-            And here are the words im gonna put on the left. well not
-            really. im going to replace these words with something
-            interesting.
-        </p>
-    </div>
-    <script src="index.js"></script>
+        <div class="circle2">
+            <p class="wordsLeft">
+                This website was made in Visual Studio Code using HTML, CSS,
+                and JavaScript!
+            </p>
+        </div>
+        <div class="buttonOne" onclick="cycle()">
+            <a class="clickMe1">Click Me!</a>
+        </div>
+        <div class="buttonTwo" onclick="cycleNext()">
+            <a class="clickMe2">Click Me!</a>
+        </div>
+        <div class="buttonThree" onclick="cycleBack()">
+            <a class="clickMe3">Click Me!</a>
+        </div>
+    </main>
 </body>
 
 </html>

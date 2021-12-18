@@ -1,5 +1,23 @@
-body {
-    background: linear-gradient(to right top, #8fa3ffb4, #18243f);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #ffdf9bb4, #f18aff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .glass {
@@ -10,14 +28,36 @@ body {
     margin-top: 4.5rem;
     margin-bottom: 5rem;
     background: linear-gradient(to right bottom,
-            rgba(250, 255, 173, 0.7),
-            rgba(201, 255, 164, 0.3));
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.3));
+    border-radius: .5rem;
+    z-index: 100;
+    backdrop-filter: blur(1rem);
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
 }
 
 .circle1, .circle2 {
-    background: linear-gradient(to right bottom,
-            rgba(250, 255, 173, 0.7),
-            rgba(201, 255, 164, 0.3));
+    background: white;
+    background: linear-gradient(to left top,
+            rgba(0, 255, 234, 0.699),
+            rgba(255, 255, 255, 0.993));
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+    z-index: 2;
 }
 
 .wordsRight {
@@ -38,8 +78,8 @@ body {
     text-align: center;
 }
 
-.buttonTwo {
-    background: orange;
+.buttonOne {
+    background: #18243f;
     border-radius: .5rem;
     height: 10rem;
     width: 10rem;
@@ -63,8 +103,8 @@ body {
     overflow: visible;
 }
 
-.clickMe2 {
-    color: #18243f;
+.clickMe1 {
+    color: #f18aff;
     font-family: orkney;
     z-index: 3;
     transform: rotate(-90deg);
@@ -88,12 +128,10 @@ body {
     overflow: visible;
 }
 
-.clickMe1 {
+.clickMe2 {
     display: none;
-    position: absolute;
 }
 
 .clickMe3 {
     display: none;
-    position: absolute;
 }
