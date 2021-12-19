@@ -1,0 +1,36 @@
+.gift {
+  text-align: center;
+  justify-content: center;
+  color: transparent;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    #f00,
+    #ff7f00,
+    #ff0,
+    #7fff00,
+    #0f0,
+    #00ff7f,
+    #0ff,
+    #007fff,
+    #00f,
+    #7f00ff,
+    #f0f,
+    #ff007f,
+    #f00,
+    #ff7f00
+  );
+  background-size: 1300%;
+  animation: bganim 10s linear infinite;
+}
+
+@keyframes bganim {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}

@@ -2,91 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width-device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
     <title>Glass Website</title>
     <style>
         @font-face {
             font-family: manrope;
-            src: url("regular.otf");
+            src: url(regular.otf);
         }
 
         @font-face {
             font-family: orkney;
-            src: url("Orkney Regular.otf");
-        }
-
-        @font-face {
-            font-family: bigzoomers;
-            src: url("SourceCodePro-ExtraLight.otf");
+            src: url(Orkney\ Regular.otf);
         }
 
         @font-face {
             font-family: bigzoomers2;
-            src: url("SourceCodePro-Light.otf");
+            src: url(SourceCodePro-Light.otf);
         }
     </style>
-    <link rel="stylesheet" href="oldLayout.css">
-    <link id="mainsheet" rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="layout.css">
+    <link id="mainsheet" rel="stylesheet" href="pinkBlue.css">
     <template id="sheets">
-        <link rel="stylesheet" href="style1.css">
-        <link rel="stylesheet" href="style2.css">
-        <link rel="stylesheet" href="style3.css">
+        <link rel="stylesheet" href="pinkBlue.css">
+        <link rel="stylesheet" href="navyGreen.css">
+        <link rel="stylesheet" href="orangePeach.css">
     </template>
+
+    <!-- <3 -->
+    <link rel="stylesheet" href="gift.css">
 </head>
 
 <body>
     <div id="fadeout"></div>
-    <main>
-        <section class="glass">
-            <h1 class="header">Hello World!</h1>
-            <p class="paragraph">
-                This is a simple little website I created to demonstrate
-                some of what I've learned in Nexus. For my Nexus project I
-                have been learning to code. I started with HTML and CSS,
-                creating several simple pages just to try stuff out and see
-                what I could create. Then, once I felt more comfortable, I
-                started learning JavaScript (which it turns out I'm pretty
-                bad at 😅). I've had some awesome conversations with Charlie
-                MacFadyen about code and he pushed me to compete in the
-                <a class="links" href="https://www.congressionalappchallenge.us/">Congressional App Challenge!</a>
-                I teamed up with my friend Windsor Hoopes and over a weekend
-                we created the first version of our bus app. Since then I've
-                been practicing and learning as much as I can. It looks like
-                I'm running out of room so I'm going to stop now while this
-                page still looks balanced. Try clicking the box :]
-            </p>
-        </section>
-        <div class="circle1">
-            <p class="wordsRight">
-                <span class="smallTitles">Helpful Resources: <br /></span>
-                <a class="links" href="https://www.w3schools.com/default.asp"><br />
-                    w3schools</a>
-                <a class="links" href="https://stackoverflow.com/">stackoverflow</a>
-                <a class="links" href="https://github.com/">GitHub</a>
-                <a class="links" href="https://codepen.io/">
-                    <br />CodePen</a>
-                <a href="https://developer.mozilla.org/en-US/" class="links"><br />
-                    MDN Web Docs</a>
-                <a class="links" href="https://code.visualstudio.com/"><br />Visual Studio Code</a>
-            </p>
-        </div>
-        <div class="circle2">
-            <p class="wordsLeft">
-                This website was made in Visual Studio Code using HTML, CSS,
-                and JavaScript!
-            </p>
-        </div>
-        <div class="buttonOne" onclick="cycle()">
-            <a class="clickMe1">Click Me!</a>
-        </div>
-        <div class="buttonTwo" onclick="cycleNext()">
-            <a class="clickMe2">Click Me!</a>
-        </div>
-        <div class="buttonThree" onclick="cycleBack()">
-            <a class="clickMe3">Click Me!</a>
-        </div>
-    </main>
+    <section class="glass">
+        <h1 class="gift header">Hello World!</h1>
+        <p class="paragraph">
+            This is a simple little website I created to demonstrate
+            some of what I've learned in Nexus. For my Nexus project I
+            have been learning to code. I started with HTML and CSS,
+            creating several simple pages just to try stuff out and see
+            what I could create. Then, once I felt more comfortable, I
+            started learning JavaScript (which it turns out I'm pretty
+            bad at &#128517;). I've had some awesome conversations with Charlie
+            MacFadyen about code and he pushed me to compete in the
+            <a target="_blank" rel="noopener noreferrer" class="links"
+                href="https://github.com/Windzyboy/Congressional-App-Challenge-2021/releases/tag/v2.0">Congressional
+                App Challenge!</a>
+            I teamed up with my friend Windsor Hoopes and over a weekend
+            we created the first version of our bus app. Since then I've
+            been practicing and learning as much as I can. It looks like
+            I'm running out of room so I'm going to stop now while this
+            page still looks balanced. Try clicking the box :]
+        </p>
+    </section>
+    <div class="circle1">
+        <p class="wordsRight">
+            <span class="smallTitles">Helpful Resources:</span><br>
+            <a target="_blank" rel="noopener noreferrer" class="links" href="https://www.w3schools.com/default.asp">
+                w3schools</a><br>
+            <a target="_blank" rel="noopener noreferrer" class="links" href="https://stackoverflow.com/">
+                stackoverflow</a><br>
+            <a target="_blank" rel="noopener noreferrer" class="links" href="https://github.com/">
+                GitHub</a><br>
+            <a target="_blank" rel="noopener noreferrer" class="links" href="https://codepen.io/">
+                CodePen</a><br>
+            <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/" class="links">
+                MDN Web Docs</a>
+        </p>
+    </div>
+    <div class="circle2">
+        <p class="wordsLeft">
+            This website was made with
+            <a target="blank_" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Glossary/HTML"
+                class="links">HTML</a>/
+            <a target="blank_" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Glossary/CSS"
+                class="links">CSS</a>/<a target="blank_" rel="noopener noreferrer"
+                href="https://developer.mozilla.org/en-US/docs/Glossary/JavaScript" class="links">JavaScript</a>
+            using
+            <a target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/" class="links">Visual
+                Studio Code</a>!
+        </p>
+    </div>
+    <div id="cycleButton">
+        <a class="clickMe">Click Me!</a>
+    </div>
     <script src="index.js"></script>
 </body>
 

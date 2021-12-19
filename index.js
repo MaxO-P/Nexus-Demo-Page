@@ -3,10 +3,11 @@ const mainsheet = document.getElementById("mainsheet");
 const templates = document.getElementById("sheets");
 // const prev = document.getElementById("pButton");
 // const next = document.getElementById("nButton");
-const next = document.getElementById("buttonOne");
+const next = document.getElementById("cycleButton");
 const fadeout = document.getElementById("fadeout")
 
-var isFading = false;
+var isFadingOut = false;
+var isFadingIn = false;
 var sheets = Array.from(templates.content.children);
 var sheetIndex = 0;
 
@@ -36,34 +37,36 @@ function cycle(isBackwards = false, speed = 250) {
     // If the user clicks the button TWICE while it is fading FROM black,
     // the next time they hit the button it will fade to same sheet.
 
-    // TO FIX THE ISSUE:
-
     // This is because the sheetIndex can change once the transition has already finished. That's not great.
     // I'll fix this later, if you want to fix it then add a variable called isFadingIn and rename isFading to isFadingOut,
     // and add an "if (!isFadingIn)" to the increment/decrement/wrap (commented as "2:00 AM code").
+    // FIXED! -W
 
     // Or you could just fix it by just not allowing the user to click the button while the animation is happening.
     // It would be way simpler, but also lame.
 
     // -W
 
-    if (!isFading) fadeout.animate([{ opacity: 0 }, { opacity: 1 }], { duration: speed, fill: 'forwards' });
+    if (!isFadingOut && !isFadingIn) fadeout.animate([{ opacity: 0 }, { opacity: 1 }], { duration: speed, fill: 'forwards', easing : 'ease' });
 
-    // This is 2:00 AM code. I'm sorry.
-    sheetIndex += (isBackwards ? -1 : 1);
-    if (sheetIndex < 0) {
-        sheetIndex = sheets.length - 1;
-    } else if (sheetIndex >= sheets.length) {
-        sheetIndex = 0;
+    if (!isFadingIn) {
+        // This is 2:00 AM code. I'm sorry.
+        sheetIndex += (isBackwards ? -1 : 1);
+        if (sheetIndex < 0) {
+            sheetIndex = sheets.length - 1;
+        } else if (sheetIndex >= sheets.length) {
+            sheetIndex = 0;
+        }
     }
 
-    if (!isFading) setTimeout(() => {
+    if (!isFadingOut && !isFadingIn) setTimeout(() => {
+        isFadingIn = true;
         mainsheet.href = sheets[sheetIndex].href;
-        fadeout.animate([{ opacity: 1 }, { opacity: 0 }], { duration: speed, fill: 'forwards' });
-        setTimeout(() => { isFading = false; }, speed);
+        fadeout.animate([{ opacity: 1 }, { opacity: 0 }], { duration: speed, fill: 'forwards', easing : 'ease' });
+        setTimeout(() => { isFadingOut = false; isFadingIn = false; }, speed);
     }, speed);
 
-    isFading = true;
+    isFadingOut = true;
 }
 
 // Set the button onclicks when the JS loads (after the button is created)
