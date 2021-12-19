@@ -1,0 +1,215 @@
+/* alright max I tried really damn hard to make this work good and do exactly what you wanted it to do*/
+
+html {
+  margin: 0;
+  font-family: "manrope", sans-serif;
+}
+
+#fadeout {
+  position: fixed;
+  user-select: none;
+  pointer-events: none;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity ease 0.5;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.glass {
+  overflow: auto;
+  /* min-height: 80vh; */
+  height: 80vh;
+  width: 60vw;
+  /* height: 20rem; */
+  /* margin-top: 5rem;
+  margin-bottom: 5rem; */
+  border-radius: 1rem;
+  z-index: 100;
+  backdrop-filter: blur(1rem);
+  /* position: relative; */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.circle1,
+.circle2 {
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  z-index: 2;
+}
+
+.circle1 {
+  top: 5%;
+  right: 15%;
+  transition: right ease 1s 0.5s;
+}
+
+.circle1:hover {
+  right: -1px;
+  transition: right ease 1s 0s;
+}
+
+.circle2 {
+  bottom: 5%;
+  left: 15%;
+  transition: left ease 1s 0.5s;
+}
+
+.circle2:hover {
+  left: -1px;
+  transition: left ease 1s 0s;
+}
+
+.wordsRight,
+.wordsLeft {
+  margin-left: 24%;
+  margin-right: 24%;
+  margin-top: 25%;
+  font-size: 100%;
+  color: #000000;
+  text-align: center;
+}
+
+.paragraph {
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  font-size: 115%;
+  color: #000000;
+}
+
+.wordsRight,
+.wordsLeft,
+.paragraph {
+  font-family: bigzoomers2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  overflow: visible;
+}
+
+.header {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 5%;
+  font-family: bigzoomers;
+  font-size: 300%;
+  text-align: center;
+  color: #000000;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  overflow: visible;
+}
+
+/* TODO: #2 What do the .backCircles do? These should be squashed into 1 CSS chunk/class */
+
+.backCircle1 {
+  position: absolute;
+  background: white;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.103),
+    rgba(255, 255, 255, 0.37)
+  );
+  height: 35rem;
+  width: 35rem;
+  border-radius: 50%;
+  left: 80%;
+  top: 60%;
+  z-index: 1;
+}
+
+.backCircle2 {
+  position: absolute;
+  background: white;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.103),
+    rgba(255, 255, 255, 0.37)
+  );
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  right: 80%;
+  bottom: 60%;
+  z-index: 1;
+}
+
+.backCircle3 {
+  position: absolute;
+  background: white;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.103),
+    rgba(255, 255, 255, 0.37)
+  );
+  height: 50rem;
+  width: 50rem;
+  border-radius: 50%;
+  right: 60%;
+  top: 10%;
+  z-index: 1;
+}
+
+.backCircle4 {
+  position: absolute;
+  background: white;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.103),
+    rgba(255, 255, 255, 0.37)
+  );
+  height: 50rem;
+  width: 50rem;
+  border-radius: 50%;
+  left: 60%;
+  bottom: 10%;
+  z-index: 1;
+}
+
+#cycleCss {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#cycleCss button {
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07); */
+  margin: 8px;
+  padding: 8px;
+  font-size: 16px;
+  border: #000 solid 2px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: transform ease 0.25s;
+}
+
+#cycleCss button:hover {
+  transform: scale(110%);
+}
+
+#cycleCss button:active {
+  transform: scale(90%);
+}

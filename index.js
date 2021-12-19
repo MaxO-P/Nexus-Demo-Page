@@ -1,8 +1,9 @@
 // Define constant HTML element variables
 const mainsheet = document.getElementById("mainsheet");
 const templates = document.getElementById("sheets");
-const prev = document.getElementById("pButton");
-const next = document.getElementById("nButton");
+// const prev = document.getElementById("pButton");
+// const next = document.getElementById("nButton");
+const next = document.getElementById("buttonOne");
 const fadeout = document.getElementById("fadeout")
 
 var isFading = false;
@@ -68,5 +69,6 @@ function cycle(isBackwards = false, speed = 250) {
 // Set the button onclicks when the JS loads (after the button is created)
 // because it's not possible to set the onclick attribute in the HTML without declaring the JS first (which breaks other stuff).
 // Also, this is easier. 
-prev.onclick = () => { cycle(true); };
+
+// prev.onclick = () => { cycle(true); };
 next.onclick = () => { cycle(false); };
