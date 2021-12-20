@@ -28,6 +28,7 @@ body {
   z-index: 4;
   backdrop-filter: blur(1rem);
   position: relative;
+  overflow: auto;
 }
 
 .circle1 {
@@ -121,10 +122,6 @@ body {
 .smallTitles {
   font-size: 150%;
   font-weight: 900;
-}
-
-.glass {
-  overflow: visible;
 }
 
 .wordsRight {
