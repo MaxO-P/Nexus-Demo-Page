@@ -1,4 +1,5 @@
 let sheet = document.getElementById("sheet");
+
 function cycle() {
     sheet.setAttribute("href", "style2.css");
 }
